@@ -29,6 +29,10 @@ def process():
 def get_users():
     return jsonify(data["users"])
 
+@app.route("/", methods=["GET"])
+def home():
+    return jsonify({"Welcome": "Welcome"})
+
 
 if __name__ == "__main__":
-    app.run(port=5000, debug=True)
+    app.run(host="0.0.0.0", port=5000)
