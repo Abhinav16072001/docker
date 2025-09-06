@@ -2,17 +2,21 @@ version: "3.9"
 
 services:
   backend:
-    build:
-      context: ./backend
+    # build:
+    #   context: ./backend
+    image: abhinavpuri15/docker-backend-app:latest
     container_name: backend-app
+
     ports:
       - "5000:5000"
     networks:
       - app-network
 
   frontend:
-    build:
-      context: ./frontend
+    # build:
+    #   context: ./frontend
+    image: abhinavpuri15/docker-frontend-app:latest
+
     container_name: frontend-app
     ports:
       - "3000:3000"
